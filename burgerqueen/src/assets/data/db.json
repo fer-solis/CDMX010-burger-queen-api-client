@@ -49,15 +49,15 @@
       "id": 1,
       "name": "Café Americano",
       "price": 5,
-      "img": "cafe americano.jpg",
+      "img": "chttps://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fcafe-americano.jpg?alt=media&token=e134ff14-ca37-483c-b6df-373bcf6609d7",
       "type": "Breakfast",
       "dateEntry": "2021-04-29T13:13:34.441Z"
     },
     {
       "id": 2,
-      "name": "Café Americano",
+      "name": "Café con leche",
       "price": 7,
-      "img": "cafe con leche.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fcafe-leche.jpg?alt=media&token=27cd7f19-9fa4-4bf3-9483-016e3ee0863b",
       "type": "Breakfast",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -65,7 +65,7 @@
       "id": 3,
       "name": "Sandwich de jamón y queso",
       "price": 10,
-      "img": "sandwich de queso y jamon.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fsandwich.jpg?alt=media&token=e7dd2920-7d0b-4160-b064-843be6e7e253",
       "type": "Breakfast",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -73,7 +73,7 @@
       "id": 4,
       "name": "Jugo de frutas natural",
       "price": 7,
-      "img": "jugo de frutas.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fjugo.jpg?alt=media&token=ce008e06-6069-498c-828d-aeb8ef85ff88",
       "type": "Breakfast",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -81,7 +81,7 @@
       "id": 5,
       "name": "Hamburguesa simple",
       "price": 10,
-      "img": "hamburguesa simple.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fhamburguesa-simple.jpg?alt=media&token=c8e4c26b-875a-4aee-a062-4f49f3ff140d",
       "type": "Dinner",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -89,7 +89,7 @@
       "id": 6,
       "name": "Hamburguesa doble",
       "price": 15,
-      "img": "hamburguesa doble.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fhamburguesa-doble.jpg?alt=media&token=ec0fbb0b-3b25-46f4-9984-0ca8d8172770",
       "type": "Dinner",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -97,7 +97,7 @@
       "id": 7,
       "name": "Papas fritas",
       "price": 5,
-      "img": "papas fritas.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fpapas.jpg?alt=media&token=be1c1da9-4668-490f-8691-adbf1cd930ba",
       "type": "Dinner",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -105,7 +105,7 @@
       "id": 8,
       "name": "Aros de cebolla",
       "price": 5,
-      "img": "aros de cebolla.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Faros-cebolla.jpg?alt=media&token=7629b0cd-9a2c-4de5-b4fa-76d8a3375f36",
       "type": "Dinner",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -113,7 +113,7 @@
       "id": 9,
       "name": "Agua 500ml",
       "price": 5,
-      "img": "agua 500 ml.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fagua-500.jpg?alt=media&token=c7b256de-3412-4fc8-8c24-aee73f3beb4d",
       "type": "Dinner",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -121,7 +121,7 @@
       "id": 10,
       "name": "Agua 750ml",
       "price": 7,
-      "img": "agua 750 ml.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fagua-750.jpg?alt=media&token=99db2b10-3502-4d79-8eb4-132877ab8e35",
       "type": "Dinner",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -129,7 +129,7 @@
       "id": 11,
       "name": "Bebida/gaseosa 500ml",
       "price": 7,
-      "img": "gaseosa 500 ml.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fgaseosa-500.jpg?alt=media&token=e33fb925-81ae-4e53-83f3-21be875e440e",
       "type": "Dinner",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     },
@@ -137,7 +137,7 @@
       "id": 12,
       "name": "Bebida/gaseosa 750ml",
       "price": 10,
-      "img": "gaseosa 750 ml.jpg",
+      "img": "https://firebasestorage.googleapis.com/v0/b/burgerqueen-445d2.appspot.com/o/img%2Fgaseosa-750.jpg?alt=media&token=da3a43c1-d9ca-4e54-84b4-e007ebc06b6c",
       "type": "Dinner",
       "dateEntry": "2014-01-01T13:13:34.441Z"
     }
