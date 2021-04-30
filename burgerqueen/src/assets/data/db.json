@@ -1,0 +1,166 @@
+{
+  "auth": ["email", "password"],
+  "users": [
+    {
+      "id": 1,
+      "email": { "email": "", "password": "" },
+      "roles": {
+        "admin": false,
+        "chef": false,
+        "waiter": true
+      }
+    },
+    {
+      "id": 2,
+      "email": {
+        "email": "fulanitaLopez@burgerqueen.com",
+        "password": 789012
+      },
+      "roles": ["waiter", "chef", "administrator"]
+    },
+    {
+      "id": 3,
+      "email": {
+        "email": "perenganoPerez@burgerqueen.com",
+        "password": 345678
+      },
+      "roles": ["waiter", "chef", "administrator"]
+    },
+    {
+      "id": 4,
+      "email": {
+        "email": "ratatouillePixar@burgerqueen.com",
+        "password": 901234
+      },
+      "rol": ["waiter", "chef", "administrator"]
+    },
+    {
+      "id": 5,
+      "name": "Tiana Princess",
+      "email": {
+        "email": "tianaPrincess@burgerqueen.com",
+        "password": 456789
+      },
+      "rol": ["waiter", "chef", "administrator"]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Café Americano",
+      "price": 5,
+      "img": "cafe americano.jpg",
+      "type": "Breakfast",
+      "dateEntry": "2021-04-29T13:13:34.441Z"
+    },
+    {
+      "id": 2,
+      "name": "Café Americano",
+      "price": 7,
+      "img": "cafe con leche.jpg",
+      "type": "Breakfast",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 3,
+      "name": "Sandwich de jamón y queso",
+      "price": 10,
+      "img": "sandwich de queso y jamon.jpg",
+      "type": "Breakfast",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 4,
+      "name": "Jugo de frutas natural",
+      "price": 7,
+      "img": "jugo de frutas.jpg",
+      "type": "Breakfast",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 5,
+      "name": "Hamburguesa simple",
+      "price": 10,
+      "img": "hamburguesa simple.jpg",
+      "type": "Dinner",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 6,
+      "name": "Hamburguesa doble",
+      "price": 15,
+      "img": "hamburguesa doble.jpg",
+      "type": "Dinner",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 7,
+      "name": "Papas fritas",
+      "price": 5,
+      "img": "papas fritas.jpg",
+      "type": "Dinner",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 8,
+      "name": "Aros de cebolla",
+      "price": 5,
+      "img": "aros de cebolla.jpg",
+      "type": "Dinner",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 9,
+      "name": "Agua 500ml",
+      "price": 5,
+      "img": "agua 500 ml.jpg",
+      "type": "Dinner",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 10,
+      "name": "Agua 750ml",
+      "price": 7,
+      "img": "agua 750 ml.jpg",
+      "type": "Dinner",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 11,
+      "name": "Bebida/gaseosa 500ml",
+      "price": 7,
+      "img": "gaseosa 500 ml.jpg",
+      "type": "Dinner",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    },
+    {
+      "id": 12,
+      "name": "Bebida/gaseosa 750ml",
+      "price": 10,
+      "img": "gaseosa 750 ml.jpg",
+      "type": "Dinner",
+      "dateEntry": "2014-01-01T13:13:34.441Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": "4",
+      "client": "María Conchita",
+      "products": [
+        [
+            "Jugo de frutas natural"
+        ],
+        {
+          "qty": 2,
+          "product":{
+            "item":"Jugo de frutas natural"
+          }
+        }
+      ],
+      "status": "pending",
+      "dateEntry": "2014-01-01T13:13:34.441Z",
+      "dateProcessed": "2014-01-01T13:13:34.441Z"
+    }
+  ]
+}
