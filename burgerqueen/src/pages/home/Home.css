@@ -1,0 +1,19 @@
+.card {
+    background: url(../../assets/img/background.png) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 140px;
+    width: 941px;
+    margin-left: 60px;
+}
+.logo{
+    width: 436px;
+    height: 336px;
+}
