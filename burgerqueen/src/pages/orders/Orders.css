@@ -1,0 +1,98 @@
+.name{
+    position: absolute;
+width: 391px;
+height: 0px;
+left: 185px;
+top: 110px;
+}
+.number{
+    position: absolute;
+width: 228px;
+height: 51px;
+left: 182px;
+top: 176px;
+}
+
+.btnsMenu{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    
+    width: 394px;
+    height: 71px;
+    left: 182px;
+    top: 260px;
+
+    background: #FFFFFF;
+    border: 2px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.tableMenu{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    overflow: scroll;
+   
+   
+    width: 394px;
+    height: 393px;
+    left: 182px;
+    top: 350px;
+    box-sizing: border-box;
+}
+
+#btnItem{
+    align-items: flex-start;
+    width: 185px;
+    height: 185px;
+    margin-bottom: 12px;
+}
+
+#ordercontent{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* align-content: space-around; */
+
+    background-color: #ff0000;
+    border-radius: 10px;
+    width: 373px;
+    height: 603px;
+    left: 626px;
+    top: 132px;
+}
+#nameClient{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#ordercontent h2{
+    color: white;
+    margin-top: 15px;
+}
+
+#ordercontent h4{
+    color: white;
+}
+
+#order{
+    /* position: absolute; */
+    width: 311px;
+    height: 334px;
+    margin-top: 25px;
+
+    background: #FFFFFF;
+    border: 2px solid #009493;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
