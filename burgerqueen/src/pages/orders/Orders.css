@@ -96,3 +96,16 @@ top: 176px;
     box-sizing: border-box;
     border-radius: 10px;
 }
+
+#ordercontent h3{
+    color: white;
+    margin: 15px 0;
+}
+
+#btnEnviar{
+   
+    width: 238px;
+    height: 56px;
+    font-size: 20px;
+    border-radius: 10px; 
+}

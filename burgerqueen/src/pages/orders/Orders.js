@@ -100,7 +100,13 @@ const Orders = () => {
         <div id="nameClient">
           <h4>María Conchita</h4>
         </div>
-        <div id="order"></div>
+        <div id="order">
+          {/* aqui va cada pedido */}
+        </div>
+        <h3>TOTAL: 150</h3>
+        <Button variant="contained" color="secondary" id="btnEnviar">
+            ENVIAR A COCINA
+        </Button>
       </div>
 
       <div className={classes.offset}></div>
