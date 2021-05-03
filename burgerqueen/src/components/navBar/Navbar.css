@@ -64,6 +64,12 @@ ul{
     justify-content: flex-start;
     align-items: center;
 }
+.iconos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 span{
     margin-left: 3px;
+    text-align: center;
 }

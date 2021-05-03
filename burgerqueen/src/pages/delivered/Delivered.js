@@ -1,7 +1,13 @@
+import React from "react";
+import "./Delivered.css";
+import Header from "../../components/header/Header";
+import Navbar from "../../components/navBar/Navbar";
+
 const Delivered = () => {
     return(
         <div>
-            <h1>Vista de ordenes</h1>
+            <Header />
+            <Navbar />
         </div>
     )
 }
