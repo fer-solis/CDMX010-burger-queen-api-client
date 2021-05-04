@@ -1,11 +1,16 @@
-.name{
+.nameOfClient{
+    display: flex;
     position: absolute;
-width: 391px;
-height: 0px;
-left: 185px;
-top: 110px;
+    width: 391px;
+    height: 0px;
+    left: 185px;
+    top: 110px;
 }
-.number{
+
+#btnAgregar{
+    margin-top: 15px;
+}
+.numberOfTable{
     position: absolute;
 width: 228px;
 height: 51px;
@@ -69,8 +74,9 @@ top: 176px;
     left: 626px;
     top: 132px;
 }
-#nameClient{
+#infoClient{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -81,7 +87,7 @@ top: 176px;
     margin-top: 15px;
 }
 
-#ordercontent h4{
+#ordercontent h4, h5{
     color: white;
 }
 

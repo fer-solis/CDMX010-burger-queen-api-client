@@ -1,7 +1,8 @@
 import React from 'react';
 
-function item({info}) {
-    let {img,name}=info
+function item({product}) {
+    // console.log(product)
+    let {img,name}=product
     return (
         <div>
             <button type="submit" id="btnItem">
