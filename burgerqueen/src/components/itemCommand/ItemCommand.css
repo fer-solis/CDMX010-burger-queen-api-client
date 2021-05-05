@@ -1,0 +1,27 @@
+#food{
+    color: #009493;
+}
+#foodDishes{
+    display: flex;
+    width: 283px;
+    height: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #009493;
+    align-items: center;
+}
+#count{
+    width: 45px;
+    height: 27px;
+    background-color: #009493;
+    border-radius: 9px;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    
+}
+.delete{
+    border: none;
+    background: none;
+}
