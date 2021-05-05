@@ -82,7 +82,7 @@ top: 176px;
 
 }
 
-#ordercontent h2{
+#title{
     color: white;
     margin-top: 15px;
 }
@@ -103,7 +103,7 @@ top: 176px;
     border-radius: 10px;
 }
 
-#ordercontent h3{
+#total{
     color: white;
     margin: 15px 0;
 }
@@ -114,4 +114,8 @@ top: 176px;
     height: 56px;
     font-size: 20px;
     border-radius: 10px; 
+}
+
+#content_2fb1df{
+    color: tomato;
 }

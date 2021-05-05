@@ -9,8 +9,11 @@ import "./Orders.css";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navBar/Navbar";
 import Item from "../../components/Item";
+import ItemCommand from "../../components/itemCommand/ItemCommand";
 
 import ReactDOM from 'react-dom';
+import { CustomDialog } from 'react-st-modal';
+import ModalForm from '../../components/modal/Modal';
 
 const useStyles = makeStyles((theme) => ({
   size: {
@@ -179,15 +182,26 @@ const handleNumberChange = (event) => {
         </div>
       </div>
       <div id="ordercontent">
-        <h2>ORDENES BURGER QUEEN</h2>
+        <h2 id="title">ORDENES BURGER QUEEN</h2>
         <div id="infoClient">
           {/* <h4>María Conchita</h4> */}
           <h4>Cliente: {clients.nameClient}</h4>
           <h5>Número de mesa: {tables.table}</h5>
         </div>
-        <div id="order">{/* aqui va cada pedido */}</div>
-        <h3>TOTAL: 150</h3>
-        <Button variant="contained" color="secondary" id="btnSend">
+        <div id="order">
+          <ItemCommand/>
+        </div>
+        <h3 id="total">TOTAL: 150</h3>
+        <Button variant="contained" color="secondary" id="btnSend" onClick={async () => {
+      const result = await CustomDialog(
+        <ModalForm/>,
+        {
+          title: 'ORDEN ENVIADA A COCINA',
+          showCloseIcon: true,
+        }
+      );
+      console.log("result",result);
+    }}>
           ENVIAR A COCINA
         </Button>
       </div>
