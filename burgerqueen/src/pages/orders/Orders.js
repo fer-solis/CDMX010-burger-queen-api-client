@@ -1,19 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Header from "../../components/header/Header";
+import Navbar from "../../components/navBar/Navbar";
+import "./Orders.css";
+
+import AllMenu from "../../components/products/AllMenu"
+import Breakfast from "../../components/products/Breakfast"
+import Dinner from "../../components/products/Dinner"
+
+import ItemCommand from "../../components/itemCommand/ItemCommand";
 
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 // import SendIcon from '@material-ui/icons/Send';
-import "./Orders.css";
 
-import Header from "../../components/header/Header";
-import Navbar from "../../components/navBar/Navbar";
-import Item from "../../components/Item";
-import ItemCommand from "../../components/itemCommand/ItemCommand";
 
-import ReactDOM from 'react-dom';
 import { CustomDialog } from 'react-st-modal';
 import ModalForm from '../../components/modal/Modal';
+
 
 const useStyles = makeStyles((theme) => ({
   size: {
@@ -24,83 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
 const Orders = () => {
   const classes = useStyles();
-
-
-////////////////////////////////
-
-  let [products, setProducts] = useState();
-
-  let handleGetData = async () => {
-    let url = "http://localhost:3000/products";
-    let getFectchData = await fetch(url).then((result) => result.json());
-    setProducts(getFectchData);
-
-    ReactDOM.render(
-      <React.StrictMode>    
-          {products && //&& para saber si existe
-              products.map(product => (
-                <Item product={product} key={product.id} />
-              ))}
-      </React.StrictMode>,
-      document.getElementById('tableMenu')
-    );
-  };
-
-  useEffect(() => {
-    handleGetData();
-  }, []);// eslint-disable-line react-hooks/exhaustive-deps
-
-//////////////////////////////////
-
-let [breakfasts, setBreakfasts] = useState();
-
-let handleBreakfast = async () => {
-  let url = "http://localhost:3000/products";
-  let getFectchData = await fetch(url).then((result) => result.json());
-  let filterBreakfast= getFectchData.filter((element) => element.type === 'Breakfast');
-  setBreakfasts(filterBreakfast);
-
-  ReactDOM.render(
-    <React.StrictMode>    
-        {breakfasts && //&& para saber si existe
-            breakfasts.map(product => (
-              <Item product={product} key={product.id} />
-            ))}
-    </React.StrictMode>,
-    document.getElementById('tableMenu')
-  );
-};
-
-useEffect(() => {
-  handleBreakfast();
-}, []);// eslint-disable-line react-hooks/exhaustive-deps
-
-
-//////////////////////////////////
-
-
-let [dinners, setDinner] = useState();
-
-let handleDinner = async () => {
-  let url = "http://localhost:3000/products";
-  let getFectchData = await fetch(url).then((result) => result.json());
-  let filterDinner= getFectchData.filter((element) => element.type === 'Dinner');
-  setDinner(filterDinner);
-
-  ReactDOM.render(
-    <React.StrictMode>    
-        {dinners && //&& para saber si existe
-            dinners.map(product => (
-              <Item product={product} key={product.id} />
-            ))}
-    </React.StrictMode>,
-    document.getElementById('tableMenu')
-  );
-};
-
-useEffect(() => {
-  handleDinner();
-}, []);// eslint-disable-line react-hooks/exhaustive-deps
 
 
 //////////////////////////////////
@@ -138,6 +65,23 @@ const handleNumberChange = (event) => {
 
 ////////////////////////
 
+ let [all, setAll] = useState(true)
+ let [breakfast, setBreakfast] = useState(false)
+ let [dinner, setDinner] = useState(false)
+
+ let handleSetAll = () => {
+   setAll(true)
+   setBreakfast(false)
+   setDinner(false)}
+ let handleSetBreakfast=()=> {
+   setBreakfast(true)
+   setAll(false)
+   setDinner(false)}
+ let handleSetDinner=()=> {
+   setDinner(true)
+   setAll(false)
+   setBreakfast(false)}
+
 
   return (
     <div>
@@ -152,11 +96,11 @@ const handleNumberChange = (event) => {
       </div>
       <div id="menuContent">
         <div className="btnsMenu">
-          <Button onClick={handleGetData} id="btnAll" size="large" variant="outlined" color="primary">
+          <Button onClick={handleSetAll} id="btnAll" size="large" variant="outlined" color="primary">
             TODO
           </Button>
           <Button
-            onClick={handleBreakfast}
+            onClick={handleSetBreakfast}
             id="btnBreakfast"
             size="large"
             variant="outlined"
@@ -165,7 +109,7 @@ const handleNumberChange = (event) => {
             DESAYUNO
           </Button>
           <Button
-          onClick={handleDinner}
+          onClick={handleSetDinner}
             id="btnDinnner"
             size="large"
             variant="outlined"
@@ -175,10 +119,10 @@ const handleNumberChange = (event) => {
           </Button>
         </div>
         <div className="tableMenu" id="tableMenu">
-        {/* {products && //&& para saber si existe
-            products.map(product => (
-              <Item product={product} key={product.id} />
-            ))} */}
+          {/* { all ? <AllMenu/> : <Dinner/>} */}
+          {all && <AllMenu/>}
+          {breakfast && <Breakfast />}
+          {dinner && <Dinner />}
         </div>
       </div>
       <div id="ordercontent">
