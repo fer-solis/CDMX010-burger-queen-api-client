@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   offset: theme.mixins.toolbar,
 }));
 
-const Orders = () => {
+const Orders = (props) => {
   const classes = useStyles();
 
 
@@ -85,7 +85,7 @@ const handleNumberChange = (event) => {
 
   return (
     <div>
-      <Header />
+      <Header props={props} />
       <Navbar />
       <div className="nameOfClient">
         <TextField className={classes.size} label="Cliente" onChange={handleInputChange} name="nameClient" />
