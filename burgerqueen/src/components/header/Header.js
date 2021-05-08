@@ -28,14 +28,15 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Header = (props) => {
+    
     const classes = useStyles()
 
     function handleLogout(e) {
         auth.signOut().then(()=> console.log('signout'))
     }
 
-    if (!props.user) {
-        console.log('here', props.user)
+    if (!props.props.user) {
+        console.log('here', props.props.user)
         return <Redirect to="/" />
     }
 
@@ -46,7 +47,7 @@ const Header = (props) => {
                     <img className='navlogo' src={NavLogo} alt=''></img>
                     <Grid container justify="flex-end" alignItems="center">
                         <Typography color="secondary" className={classes.espacio}>
-                            Name
+                        <p>{props.props.user.email}</p>
                     </Typography>
                         <Avatar className={classes.teal}>
                             <PersonIcon />
