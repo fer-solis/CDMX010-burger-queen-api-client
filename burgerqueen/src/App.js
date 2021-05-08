@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        console.log('user is logged in')
+        // console.log('user is logged in')
         setUser(user)
       } else {
         console.log('user is logged out')

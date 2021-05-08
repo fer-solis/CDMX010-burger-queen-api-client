@@ -47,7 +47,7 @@ const Header = (props) => {
                     <img className='navlogo' src={NavLogo} alt=''></img>
                     <Grid container justify="flex-end" alignItems="center">
                         <Typography color="secondary" className={classes.espacio}>
-                        <p>{props.props.user.email}</p>
+                        {props.props.user.email}
                     </Typography>
                         <Avatar className={classes.teal}>
                             <PersonIcon />
