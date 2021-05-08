@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 import Header from "../../components/header/Header";
 import Navbar from "../../components/navBar/Navbar";
 import "./Orders.css";
@@ -6,8 +6,8 @@ import "./Orders.css";
 //import { auth } from '../../Firebase'
 
 import AllMenu from "../../components/products/AllMenu"
-import Breakfast from "../../components/products/Breakfast"
-import Dinner from "../../components/products/Dinner"
+// import Breakfast from "../../components/products/Breakfast"
+// import Dinner from "../../components/products/Dinner"
 
 // import ItemCommand from "../../components/itemCommand/ItemCommand";
 
@@ -47,12 +47,6 @@ const handleInputChange = (event) => {
     [event.target.name] : event.target.value
   })
 }
-
-// // const enviarDatos = (event) => {
-// //   event.preventDefault()
-// //   console.log('enviando datos...' + clients.nameClient )
-// // }
-
 // ////////////////////////
 
 const [tables, setTables] = useState({
@@ -66,26 +60,53 @@ const handleNumberChange = (event) => {
     [event.target.id] : event.target.value
   })
 }
-
 // ////////////////////////
 
- let [all, setAll] = useState(true)
- let [breakfast, setBreakfast] = useState(false)
- let [dinner, setDinner] = useState(false)
+//  let [all, setAll] = useState(true)
+//  let [breakfast, setBreakfast] = useState(false)
+//  let [dinner, setDinner] = useState(false)
 
- let handleSetAll = () => {
-   setAll(true)
-   setBreakfast(false)
-   setDinner(false)}
- let handleSetBreakfast=()=> {
-   setBreakfast(true)
-   setAll(false)
-   setDinner(false)}
- let handleSetDinner=()=> {
-   setDinner(true)
-   setAll(false)
-   setBreakfast(false)}
+//  let handleSetAll = () => {
+//    setAll(true)
+//    setBreakfast(false)
+//    setDinner(false)}
+//  let handleSetBreakfast=()=> {
+//    setBreakfast(true)
+//    setAll(false)
+//    setDinner(false)}
+//  let handleSetDinner=()=> {
+//    setDinner(true)
+//    setAll(false)
+//    setBreakfast(false)}
 
+    let [products, setProducts] = useState();
+    let [ view, setView ] = useState();
+
+    let handleGetData = async (filter) => {
+        let url = "http://localhost:3000/products";
+        let getFectchData = await fetch(url).then((result) => result.json());
+    
+        // console.log('filtrado'+ filter)
+        // if(filter === 'all'){
+      
+         if(filter === 'breakfast'){
+          setProducts(getFectchData.filter((element) => element.type === 'Breakfast'));
+          setView('breakfast')
+        }else if(filter === 'dinner'){
+          setProducts(getFectchData.filter((element) => element.type === 'Dinner'));
+          setView('dinner')
+        } else{
+          setProducts(getFectchData)
+        }
+    };
+
+    useEffect(() => {
+        handleGetData('all');
+      }, []);// eslint-disable-line react-hooks/exhaustive-deps      
+
+      // if(view === 'all'){
+      //   return <AllMenu products={products}/>
+      // }
 
   return (
     <Fragment>
@@ -99,11 +120,11 @@ const handleNumberChange = (event) => {
           </div>
           
          <div className="btnsMenu">
-           <Button onClick={handleSetAll} id="btnAll" size="large" variant="outlined" color="primary">
+           <Button onClick={()=> handleGetData('all')} id="btnAll" size="large" variant="outlined" color="primary">
              TODO
            </Button>
            <Button
-            onClick={handleSetBreakfast}
+            onClick={()=> handleGetData('breakfast')}
             id="btnBreakfast"
             size="large"
             variant="outlined"
@@ -112,7 +133,7 @@ const handleNumberChange = (event) => {
             DESAYUNO
           </Button>
           <Button
-          onClick={handleSetDinner}
+            onClick={()=> handleGetData('dinner')}
             id="btnDinnner"
             size="large"
             variant="outlined"
@@ -122,10 +143,12 @@ const handleNumberChange = (event) => {
           </Button>
         </div>
         <div className="tableMenu" id="tableMenu">
-          {/* { all ? <AllMenu/> : <Dinner/>} */}
-          {all && <AllMenu/>}
+          {/* {all && <AllMenu/>}
           {breakfast && <Breakfast />}
-          {dinner && <Dinner />}
+          {dinner && <Dinner />} */}
+          {view === 'all'} {<AllMenu products={products}/>}
+          {view === 'breakfast'} {<AllMenu products={products}/>}
+          {view === 'dinner'} {<AllMenu products={products}/>}
         </div>
         
     </Fragment>              

@@ -36,11 +36,19 @@ function Item(props) {
 // }
 
 // console.log(product.name)
+const getComponent = (event)=>{
+  // console.log(event.currentTarget.id)
+  const target = event.currentTarget.id;
+  console.log(target)
+  // if(target.id === 'btnAll'){
+  //    return <AllMenu allProducts={allProducts}/>;
+   }
 
   let { img, name, id, price } = props.product;
+
   return (
     <div>
-      <button type="submit" className="btnItem" id={id} name={name} data-price={price}>
+      <button onClick={getComponent} type="submit" className="btnItem" id={id} name={name} data-price={price}>
         <img src={img} alt="" id={name} />
       </button>
     </div>
