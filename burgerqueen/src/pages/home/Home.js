@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./Home.css";
 import logo from "../../assets/img/logo.png";
-//import Loginmodal from '../../components/loginModal/Loginmodal';
 import Button from "@material-ui/core/Button";
 import { auth } from '../../Firebase'
 import { Redirect } from "react-router-dom"
@@ -12,7 +11,9 @@ const initialInputs= {
     password:''
 }
 
-const Home = (props) => {
+const Home = ({user}) => {
+  // console.log(props.user) //false
+  //console.log(user)//false
 
     const [inputs, setInputs] = useState(initialInputs)
 
@@ -28,7 +29,7 @@ const Home = (props) => {
         auth.signInWithEmailAndPassword(inputs.email, inputs.password)
       }
 
-      if (props.user) {
+      if (user) {
         return <Redirect to="/orders" />
       }
 
