@@ -1,6 +1,6 @@
 import React from "react";
 
-function Item({product, handleAddProducts}) {
+function Item({product, addItem}) {
   // console.log('item', props)
   //  console.log(product);
 
@@ -41,7 +41,7 @@ function Item({product, handleAddProducts}) {
 
    const enviarDatos = (event) =>{
 		event.preventDefault();
-		handleAddProducts(product);
+		addItem(product);
 	}
   //console.log(enviarDatos)
 

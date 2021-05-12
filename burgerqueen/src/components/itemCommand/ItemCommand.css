@@ -1,3 +1,6 @@
+#list{
+    margin: 10px;
+}
 #food{
     color: #009493;
 }
@@ -10,7 +13,7 @@
     color: #009493;
     align-items: center;
 }
-#count{
+.count{
     width: 45px;
     height: 27px;
     background-color: #009493;

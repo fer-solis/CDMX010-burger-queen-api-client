@@ -1,13 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './ItemCommand.css';
 
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
-function ItemCommand({order, handleAddProducts, handleDeleteProducts}) {
+function ItemCommand({order, addItem, handleDeleteProducts,handleSetQuantity}) {
     //console.log('info de itemcomand' + order.nameClient)
     //console.log('info de itemcomand' + order.table)
+    
+    const enviarDatos = (event) =>{
+		addItem({[event.target.id]: event.target.value});
+	}
 
-    const [total, setTotal] = useState();
+    // const [total, setTotal] = useState();
 
     return (
         <>
@@ -20,19 +24,19 @@ function ItemCommand({order, handleAddProducts, handleDeleteProducts}) {
             //     console.log(suma)
             // }
 
-        const addTotal = (event) => {
-            setTotal(event.target.value*product.price)   
-            }   
+        // const addTotal = (event) => {
+        //      setTotal(event.target.value*product.price)   
+        //     }   
         
                 return(
-                    <form  key={product.id}>
+                    <form id="list" key={product.id}>
                         <h3  id="food">{product.name}</h3>
                         <div id="foodDishes">
-                            <p>${product.price}</p>
-                            <input id="count" type="number" 
-                            onChange={addTotal}></input>
+                            <p>p/u ${product.price}</p>
+                            <input className="count" id={product.id} type="number" 
+                            onChange={((e)=>{handleSetQuantity(e, product)})}></input>
                             {/* <p>${suma}</p> */}
-                            <p>${total}</p>
+                            <p>${addItem.total}</p>
                             <button className="delete"
                             onClick={()=>deleteProductOrder(order, product,handleDeleteProducts)}>
                                 <DeleteForeverIcon
@@ -54,3 +58,7 @@ const deleteProductOrder = (order, product,handleDeleteProducts) => {
 	const deleteProduct=order.items.filter((item) => item.id !== product.id);
 	handleDeleteProducts(deleteProduct)
 }
+
+
+
+//////////////////////////////

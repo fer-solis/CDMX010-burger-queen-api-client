@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import Item from '../Item'
 import "./Products.css"
 
-function AllMenu({products, handleAddProducts}) {
-    // console.log(products)//item de acuerdo al boton
+function AllMenu({products, addItem}) {
+    
     //console.log('info del all menu' + addProduct.id)
 
     return (
@@ -13,7 +13,9 @@ function AllMenu({products, handleAddProducts}) {
               <Item 
               product={product} 
               key={product.id} 
-              handleAddProducts={handleAddProducts}/>
+              addItem={addItem}
+            //   handleAddProducts={handleAddProducts}
+              />
             ))}
         </Fragment>
     );

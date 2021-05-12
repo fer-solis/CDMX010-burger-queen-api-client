@@ -96,11 +96,11 @@ top: 176px;
     width: 311px;
     height: 334px;
     margin-top: 25px;
-
     background: #FFFFFF;
     border: 2px solid #009493;
     box-sizing: border-box;
     border-radius: 10px;
+    overflow: scroll;
 }
 
 #total{
